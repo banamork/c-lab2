@@ -4,7 +4,6 @@
 using namespace std;
 
 int menu(){
-    int choice;
     cout << endl << "....................................................................." << endl;
     cout << "Выберите действие:" << endl;
     cout << "1 - Выйти из программы." << endl;
@@ -13,8 +12,12 @@ int menu(){
     cout << "4 - Площадь полярного сектора лемнискаты в зависимости от угла полярного радиуса." << endl;
     cout << "5 - Площадь лемнискаты." << endl;
     cout << endl << "....................................................................." << endl;
-    do{
-        cin >> choice;
-    }while(isdigit(choice) == true && 1 <= choice <= 5 );
+    double choice{0};
+    cin >> choice;
+    if(cin.fail() || choice > 5 || choice < 0) {
+        cin.clear();
+        cin.ignore();
+        cout << "Введите корректные значения!" << endl;
+    }
     return choice;
 }
