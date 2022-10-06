@@ -3,54 +3,19 @@
 
 using namespace std;
 
-
-void showMenu(){
-    printf("\n ..................................................................... \n");
+int menu(){
+    int choice;
+    cout << endl << "....................................................................." << endl;
     cout << "Выберите действие:";
     cout << "0 - Выйти из программы." << endl;
-    cout << "1 - " << endl;
-    cout << "2 - " << endl;
-    cout << "3 - " << endl;
-    cout << "4 - " << endl;
-    cout << "\n ..................................................................... \n";
+    cout << "1 - Задать кривую." << endl;
+    cout << "2 - Расстояние до центра в полярной системе координат, в зависимости от угла." << endl;
+    cout << "3 - Радиус кривизны." << endl;
+    cout << "4 - Площадь полярного сектора лемнискаты в зависимости от угла полярного радиуса." << endl;
+    cout << "5 - Площадь лемнискаты." << endl;
+    cout << endl << "....................................................................." << endl;
+    do{
+        cin >> choice;
+    }while(isdigit(choice) == true && 0 <= choice <= 5 );
+    return choice;
 }
-
-
-
-int verify ( char* menu ){
-    while ( 1 )
-    {
-        if( menu == NULL )
-        {
-            cout << "Вы ничего не ввели." << endl;
-            //cin.getline( );
-        } else if (strlen( menu ) == 0 )
-        {
-            cout << "Вы ничего не ввели." << endl;
-            free( menu );
-            //menu = readline("");
-        } else if( strlen(menu) == 1 )
-        {
-            if (isdigit( menu[0]) )
-            {
-                int k = atoi( menu );
-                free( menu );
-                return k;
-            }
-            else
-            {
-                cout << "Неверно введён пункт меню." << endl;
-                free( menu );
-                //menu = cin.getline();
-            }
-        }
-        else
-        {
-            cout << "Неверно введён пункт меню." << endl;
-            free( menu );
-            //cin.getline( menu );
-        }
-    }
-}
-
-
