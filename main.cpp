@@ -8,7 +8,15 @@ using namespace std;
 int main(){
     double A;
     cout << "Введите значение параметра вашей кривой:" << endl;
-    cin >> A;
+    do{
+        if(!cin)
+        {
+            cin.clear();
+            while (cin.get() != '\n');
+            cout << "Повторите ввод.\n";
+        }
+        cin >> A;
+    }while(!cin);
     lemniscata_bernulli lember;
     lember.set_a(A);
     int flag = 0;
