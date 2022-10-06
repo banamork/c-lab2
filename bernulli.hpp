@@ -6,7 +6,10 @@ using namespace std;
 
 class lemniscata_bernulli {
     public:
-        double return_distance(double a){
+        void set_a(double A){
+            a = A;
+        }
+        double return_distance(){
             double x, y;
             double p;
             double f;
@@ -17,26 +20,28 @@ class lemniscata_bernulli {
             cout << "Введите значение координаты y" << endl;
             cin >> y;
             p = sqrt(2 * pow(a, 2) * cos(2 * f));
-            cout << p;
+            cout << "Расстояние до центра: " << p << endl;
             return p;
         }
-        void radius(double a){
+        void radius(){
             double r;
             double p;
-            p = return_distance(a);
+            p = return_distance();
             r = 2 * pow(a, 2) / 3. * p;
+            cout << "Радиус леминискаты: " << r << endl;
         }
-        void sector_area(double a){
+        void sector_area(){
             double s;
             double f;
             cout << "Введите значение угла" << endl;
+            cin >> f;
             s = (pow(a, 2) / 2.) / sin(2 * f);
-            cout << s;
+            cout << "Площадь вашего сектора: " << s << endl;
         }
-        void square(double a){
+        void square(){
             double s;
             s = pow(a, 2) / 2.;
-            cout << s;
+            cout << "Площадь леминискаты: " << s << endl;
         }
     private:
         double a;
