@@ -7,6 +7,7 @@ using namespace std;
 
 int main(){
     double A;
+    double F;
     cout << "Введите значение параметра вашей кривой:" << endl;
     do{
         if(!cin)
@@ -27,13 +28,40 @@ int main(){
                 flag = 1;
                 break;
             case 2:
-                lember.return_distance();
+                cout << "Введите значение угла" << endl;
+                do{
+                    if(!cin){
+                        cin.clear();
+                        while (cin.get() != '\n');
+                        cout << "Повторите ввод." << endl;
+                    }
+                    cin >> F;
+                }while(!cin);
+                lember.return_distance(F);
                 break;
             case 3:
-                lember.radius();
+                cout << "Введите значение угла" << endl;
+                do{
+                    if(!cin){
+                        cin.clear();
+                        while (cin.get() != '\n');
+                        cout << "Повторите ввод." << endl;
+                    }
+                    cin >> F;
+                }while(!cin);
+                lember.radius(F);
                 break;
             case 4:
-                lember.sector_area();
+                cout << "Введите значение угла" << endl;
+                do{
+                    if(!cin){
+                        cin.clear();
+                        while (cin.get() != '\n');
+                        cout << "Повторите ввод." << endl;
+                    }
+                    cin >> F;
+                }while(!cin);
+                lember.sector_area(F);
                 break;
             case 5:
                 lember.square();
