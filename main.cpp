@@ -13,7 +13,7 @@ int main(){
         {
             cin.clear();
             while (cin.get() != '\n');
-            cout << "Повторите ввод.\n";
+            cout << "Повторите ввод." << endl;
         }
         cin >> A;
     }while(!cin);
