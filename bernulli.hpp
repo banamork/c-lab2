@@ -1,11 +1,17 @@
 #include <iostream>
 #include <string>
 #include <cmath>
+#include <cassert>
+
 
 using namespace std;
 
 class lemniscata_bernulli {
     public:
+        lemniscata_bernulli(double A = 10){
+            assert(a != 10);
+            a = A;
+        }
         void set_a(double A){
             a = A;
         }
