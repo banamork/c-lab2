@@ -21,22 +21,25 @@ class lemniscata_bernulli {
             cout << "Расстояние до центра: " << p << endl;
             return p;
         }
-        void radius(double f){
+        double radius(double f){
             double r;
             double p;
             p = return_distance(f);
             r = 2 * pow(a, 2) / 3. * p;
             cout << "Радиус леминискаты: " << r << endl;
+            return r;
         }
-        void sector_area(double f){
+        double sector_area(double f){
             double s;
             s = (pow(a, 2) / 2.) / sin(2 * f);
             cout << "Площадь вашего сектора: " << s << endl;
+            return s;
         }
-        void square(){
+        double square(){
             double s;
             s = pow(a, 2) / 2.;
             cout << "Площадь леминискаты: " << s << endl;
+            return s;
         }
     private:
         double a;

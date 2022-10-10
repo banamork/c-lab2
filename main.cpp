@@ -50,7 +50,7 @@ int main(){
                 lember.set_a(par);
                 break;
             case 7:
-                cout << "Введите значение угла" << endl;
+                cout << "Введите новое значение угла" << endl;
                 do{
                     if(!cin){
                         cin.clear();
